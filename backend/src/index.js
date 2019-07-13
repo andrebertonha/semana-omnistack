@@ -9,7 +9,7 @@ const server = require('http').Server(app);
 // real time
 const io = require('socket.io')(server);
 
-mongoose.connect('mongodb+srv://andrebertonha:andre@cluster0-kflaj.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://andrebertonha:andremartins@cluster0-kflaj.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser: true,
 });
 
