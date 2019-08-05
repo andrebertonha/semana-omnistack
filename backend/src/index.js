@@ -3,13 +3,14 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
 
-const app = express();
+require('dotenv').config();
 
+const app = express();
 const server = require('http').Server(app);
 // real time
 const io = require('socket.io')(server);
 
-mongoose.connect('mongodb+srv://andrebertonha:andremartins@cluster0-kflaj.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
 });
 
